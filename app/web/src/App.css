@@ -330,3 +330,15 @@
     justify-content: flex-end;
   }
 }
+
+.welcome-page .author {
+  margin-top: 0;
+  color: #58a6ff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.white {
+  color: #fff;
+}

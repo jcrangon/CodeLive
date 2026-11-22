@@ -143,6 +143,10 @@ export default function App() {
 
         <h1>CodeLive</h1>
 
+        <p className="author">
+          <small>Une réalisation de <strong><span className="white">Jean-Christophe RANGON</span></strong></small>
+        </p>
+
         <p>
           Suivez le code de votre formateur
           en temps réel.
@@ -177,7 +181,7 @@ export default function App() {
           <strong>CodeLive</strong>
 
           <span className="brand-subtitle">
-            Espace étudiant
+            Espace étudiant · Jean-Christophe RANGON
           </span>
         </div>
 
