@@ -1,0 +1,18 @@
+
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CodeLive — Debug extension",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}/app/extension"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/app/extension/dist/**/*.js"
+      ],
+      "preLaunchTask": "codelive: build extension"
+    }
+  ]
+}

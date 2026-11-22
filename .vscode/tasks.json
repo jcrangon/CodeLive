@@ -1,0 +1,24 @@
+
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "codelive: build extension",
+      "type": "shell",
+      "command": "npm",
+      "args": [
+        "run",
+        "build",
+        "--prefix",
+        "app/extension"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "group": "build"
+    }
+  ]
+}

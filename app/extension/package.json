@@ -1,0 +1,87 @@
+{
+  "name": "codelive",
+  "displayName": "CodeLive",
+  "description": "Partagez votre code en direct avec vos étudiants.",
+  "version": "0.1.0",
+  "publisher": "codelive-dev",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Education",
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onCommand:codelive.configureServer",
+    "onCommand:codelive.configureAdminKey",
+    "onCommand:codelive.start",
+    "onCommand:codelive.copyLink",
+    "onCommand:codelive.stop"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "codelive.configureServer",
+        "title": "CodeLive: Configurer le serveur"
+      },
+      {
+        "command": "codelive.configureAdminKey",
+        "title": "CodeLive: Configurer la clé d'accès"
+      },
+      {
+        "command": "codelive.start",
+        "title": "CodeLive: Démarrer le partage"
+      },
+      {
+        "command": "codelive.copyLink",
+        "title": "CodeLive: Copier le lien étudiant"
+      },
+      {
+        "command": "codelive.stop",
+        "title": "CodeLive: Arrêter le partage"
+      }
+    ],
+    "configuration": {
+      "title": "CodeLive",
+      "properties": {
+        "codelive.serverUrl": {
+          "type": "string",
+          "default": "http://127.0.0.1:3000",
+          "scope": "application",
+          "description": "URL HTTP(S) du serveur CodeLive centralisé."
+        },
+        "codelive.studentWebUrl": {
+          "type": "string",
+          "default": "http://127.0.0.1:5173",
+          "scope": "application",
+          "description": "URL publique de l'interface web étudiante."
+        },
+        "codelive.syncDelay": {
+          "type": "integer",
+          "default": 200,
+          "minimum": 50,
+          "maximum": 2000,
+          "scope": "application",
+          "description": "Délai en millisecondes avant transmission des modifications."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "ws": "^8.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/vscode": "^1.146.0",
+    "@types/ws": "^8.18.2",
+    "typescript": "^7.0.2"
+  }
+}
